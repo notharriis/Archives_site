@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.js" integrity="sha512-rW0AnJ6ZfiGg+vLsmh3gEdtdBAI0EHPbiBOIgR76bd94L2aOkNzZ8+v5Bl3cxuDZB3UYkJArhtNhjYbs4ASbGA==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.css" integrity="sha512-CBt9ZLK1JPTeo8L3oU8vfes2s/IE4F0QkFWf/zAB231WvVOEntSWOouCBH0g2rlFqbr4enss+I43SLGMGqsDWA==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" integrity="sha512-egJ/Y+22P9NQ9aIyVCh0VCOsfydyn8eNmqBy+y2CnJG+fpRIxXMS6jbWP8tVKp0jp+NO5n8WtMUAnNnGoJKi4w==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/4.0.0/shuffle.min.js" integrity="sha512-z0falAsjrpKeZ5ubPQgG4e82bGxhegCf1eMFAGPUNfhcNjbmra8lnCvTkCT4cdB8gXveptaa09fTs3x1LjHn6w==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="Tla.js"></script>
+    
+    <title>Books</title>
+</head>
+<body>
+  <div id="main-container" class="main-container nav-effect-1" style="background-color: rgb(65, 64, 64);">
+
+
+  <!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("Books_nav.html");
+});
+</script>
+<!--end of Navigation bar-->
+  
+    <div class="main clearfix">
+  
+      <!-- Header Content -->
+      <header id="header" class="page-header">
+        <div class="page-header-container row">
+  
+          <!-- Logo -->
+          
+  
+          <div class="menu-search">
+            <!-- Main Navigation -->
+            <div class="main-navigation">
+              <a href="#">Menu</a>
+            </div>
+  
+            <!-- Search -->
+            <div class="catalog-search">
+              <input class="shuffle-search input_field " type="search" autocomplete="off" value="" maxlength="128" id="input-search" />
+              <label class="input_label" for="input-search">
+                <span  class="input_label-content">Search Library</span>
+                <span class="input_label-search"></span>
+              </label>
+            </div>
+  
+          </div>
+        </div>
+      </header>
+  
+      
+      <!-- Main Section -->
+      <div class="page-container">
+  
+        <div class="page-title category-title">
+          <!-- <h1>Book Viewer</h1> -->
+        </div>
+  
+        <section id="book_list">
+  
+          <div class="toolbar row">
+            <div class="filter-options small-12 medium-9 columns">
+              <a href="#" class="filter-item active" data-group="all">All Categories</a>
+              <a href="#" class="filter-item" data-group="Romance">Romance</a>
+              <a href="#" class="filter-item" data-group="Fiction">Fiction</a>
+              <a href="#" class="filter-item" data-group="Fantasy">Fantasy</a>
+              <a href="#" class="filter-item" data-group="classic">Classics</a>
+              <a href="#" class="filter-item" data-group="Thriller/Mystery">Thriller/Mystery</a>
+              <a href="#" class="filter-item" data-group="Poetry">Poetry</a>
+              <a href="#" class="filter-item" data-group="Biography">Biography</a>
+            </div>
+  
+            <div class="small-12 medium-3 columns">
+              <select class="sort-options">
+              <option value="" disabled selected>Sort by</option>
+              <option value="" >Featured</option>
+              <option value="title">Alphabetical</option>
+              <option value="date-created">Published</option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="grid-shuffle">
+            <ul id="grid" class="row">
+
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fantasy","Fiction"]' data-date-created='2016' data-title='Heartless' data-color='#725d64'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\heartless.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Heartless</h3>
+                  <p class="author">Marissa Meyer &bull; 2016</p>
+                  <p>Long before she was the terror of Wonderland—the infamous Queen of Hearts—she was just a girl who wanted to fall in love.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fantasy","Fiction"]' data-date-created='2011' data-title="Silence" data-color='#658539'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\cvr9781442426658_9781442426658_hr.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Silence</h3>
+                  <p class="author">Becca Fitzpatrick &bull; 2011</p>
+                  <p>Nora Grey can't remember the past five months of her life. After the initial shock of waking up in a cemetery and being told that she has been missing for weeks - with no one knowing where she was or who she was with - she tried to get her life back on track. Go to school, hang out with her best friend, Vee, and dodge mom's creepy new boyfriend.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Thriller/Mystery","Fiction"]' data-date-created='2011' data-title="The Storm" data-color='#658539'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\the-storm.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">The Storm</h3>
+                  <p class="author"> Clive Cussler &bull; 2012</p>
+                  <p>In the middle of the Indian Ocean, a NUMA research vessel is taking water samples at sunset, when a crew member spots a sheen of black oil ahead of them. But it is not oil. Like a horde of army ants, a swarm of black particles suddenly attacks the ship, killing everyone aboard, while the ship itself goes up in flames.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Biography"]' data-date-created='2011' data-title="The Women of the Cousins' War" data-color='#658539'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\war.jpeg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">The Women of the Cousins' War</h3>
+                  <p class="author"> Philippa Gregory &bull; 2011</p>
+                  <p>Elizabeth Woodville, The White Queen (2009), Margaret Beaufort, The Red Queen (2010), and Jacquetta, Lady Rivers, The Rivers Woman (2011) are the subjects of the first three novels in Philippa Gregory's Cousins' War series, and of the three biographical essays in this book.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Biography"]' data-date-created='2005' data-title="The Innocent" data-color='#658539'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\war.jpeg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">The Women of the Cousins' War</h3>
+                  <p class="author"> Philippa Gregory &bull; 2005</p>
+                  <p>Elizabeth Woodville, The White Queen (2009), Margaret Beaufort, The Red Queen (2010), and Jacquetta, Lady Rivers, The Rivers Woman (2011) are the subjects of the first three novels in Philippa Gregory's Cousins' War series, and of the three biographical essays in this book.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+
+
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2013' data-title='The Madmans Daughter' data-color='#705e1e'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\index.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">The Madman's Daughter</h3>
+                  <p class="author">Megan Shepherd &bull; 2013</p>
+                  <p>Following accusations that her scientist father gruesomely experimented on animals, sixteen-year-old Juliet watched as her family and her genteel life in London crumbled around her.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Thriller/Mystery"]' data-date-created=' 2003' data-title='The Da Vinci Code' data-color='#939894'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\image.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">The Da Vinci Code</h3>
+                  <p class="author">Dan Brown &bull; 2003</p>
+                  <p>Louvre curator and Priory of Sion grand master Jacques Saunière is fatally shot one night at the museum by an albino Catholic monk named Silas, who is working on behalf of someone he knows only as the Teacher, who wishes to discover the location of the "keystone," an item crucial in the search for the Holy Grail.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+  
+              </li>
+
+              <li class="book-item small-12 medium-6 columns" data-groups='["Romance"]' data-date-created='1962' data-title='Point of Retreat' data-color='#fe7b21'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\19390926.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Point of Retreat</h3>
+                  <p class="author">Colleen Hoover &bull; 2012</p>
+                  <p>Sometimes two people have to fall apart to realize just how much they belong together.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Romance"]' data-date-created='1835' data-title='myheartandotherblackholes' data-color='#aea98c'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\my heart and other black holes.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">My Heart and Other Black Holes</h3>
+                  <p class="author">Jasmine Warga &bull; 2015</p>
+                  <p>Sixteen-year-old physics nerd Aysel is obsessed with plotting her own death. With a mother who can barely look at her without wincing, classmates who whisper behind her back, and a father whose violent crime rocked her small town, Aysel is ready to turn her potential energy into nothingness.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+
+
+
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='1866' data-title="Crime and Punishment" data-color='#2c63a0'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\cap3.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Crime and Punishment</h3>
+                  <p class="author">Fyodor Dostoevsky &bull; 1866</p>
+                  <p>Rodion Romanovich Raskolnikov, a former law student, lives in extreme poverty in a tiny, rented room in Saint Petersburg. Isolated and antisocial, he has abandoned all attempts to support himself, and is brooding obsessively on a scheme he has devised to murder and rob an elderly pawn-broker. On the pretext of pawning a watch, he visits her apartment, but remains unable to commit himself.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+
+
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fantasy","Fiction"]' data-date-created='2018' data-title='Vox' data-color='#800020'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\vox.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Vox</h3>
+                  <p class="author">Christina Dalcher &bull; 2018</p>
+                  <p>Set in an America where half the population has been silenced, VOX is the harrowing, unforgettable story of what one woman will do to protect herself and her daughter.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+
+
+
+              
+
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Romance"]' data-date-created='1937' data-title='Slammed' data-color='#fcc278'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\Slammed.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Slammed</h3>
+                  <p class="author">Colleen Hoover &bull; 2012</p>
+                  <p>Emotion-packed debut novel unforgettably captures all the magic and confusion of first love, as two young people forge an unlikely bond before discovering that fate has other plans for them.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+  
+                
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='1951' data-title='Holding_smoke' data-color='#009c8b'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\22639535.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Holding Smoke</h3>
+                  <p class="author"> Elle Cosimano &bull; 2016</p>
+                  <p>An inventive paranormal gambit, a compelling lead character, and a plot that twists and turns through to the last page.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+                  
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Romance"]' data-date-created='2012' data-title='2012' data-color='#9c9688'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\Losing hope.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Losing Hope</h3>
+                  <p class="author">Colleen Hoover &bull; 2012</p>
+                  <p>Haunted by the little girl he couldn’t save from imminent danger, Holder’s life has been overshadowed by feelings of guilt and remorse.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+  
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Romance"]' data-date-created='1954' data-title='maybe someday' data-color='#db2e0f'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\maybesomeday.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Maybe Someday</h3>
+                  <p class="author">Colleen Hoover &bull; 2014</p>
+                  <p>At twenty-two years old, Sydney is enjoying a great life: She’s in college, working a steady job, in love with her wonderful boyfriend, Hunter, and rooming with her best friend, Tori. But everything changes when she discovers that Hunter is cheating on her—and she’s forced to decide what her next move should be.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+  
+            
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='1925' data-title='love letters to the dead' data-color='#e3b005'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\lovelettersdead.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Love Letters To The Dead</h3>
+                  <p class="author">Ava Dellaira &bull; 2014</p>
+                  <p>Laurel has just started class at a new high school. She is a quiet student who still dresses like she's in middle school. Mrs. Buster, her English teacher, gives the class an assignment to write a letter to a dead person. Laurel chooses Kurt Cobain and begins an ongoing relationship with the other dead people. "Confiding in dead geniuses helps a teen process her grief and rage."</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='1851' data-title='All the Bright Places' data-color='#a9afad'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\18460392.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">All the Bright Places</h3>
+                  <p class="author">Jennifer Niven &bull; 2015</p>
+                  <p>Theodore Finch and Violet Markey are two teenagers who badly want to escape from their small Indiana town.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+            
+  
+              
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2019' data-title='Rules For Vanishing' data-color='#b4aa91'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\rules.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Rules For Vanishing</h3>
+                  <p class="author">Kate Alice Marshall &bull; 2019</p>
+                  <p>Once a year, a road appears in the forest. And at the end of it, the ghost of Lucy Gallows beckons. Lucy's game isn't for the faint of heart. If you win, you escape with your life. But if you lose....</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Thriller/Mystery"]' data-date-created='2014' data-title="Panic" data-color='#7a4930'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\panic.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Panic</h3>
+                  <p class="author">Lauren Oliver &bull; 2014</p>
+                  <p>Panic began as so many things do in Carp, a poor town of twelve thousand people in the middle of nowhere: because it was summer, and there was nothing else to do. Heather never thought she would compete in panic.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2016' data-title="Girl in Pieces" data-color='#603060'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\81avn+rvTlL.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Girl in Pieces</h3>
+                  <p class="author">Kathleen Glasgow &bull; 2016</p>
+                  <p>Charlie Davis is in pieces. At seventeen, she’s already lost more than most people lose in a lifetime.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fantasy","Fiction"]' data-date-created='2017' data-title="Because You Love to Hate Me" data-color='#9a9c43'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\love.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Because You Love to Hate Me</h3>
+                  <p class="author">Amerie &bull; 2017</p>
+                  <p>Leave it to the heroes to save the world--villains just want to rule the world.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+          
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Thriller/Mystery"]' data-date-created='2005' data-title="Immoral" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\immoral.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Immoral</h3>
+                  <p class="author">Brian Freeman &bull; 2005</p>
+                  <p>In a riveting debut thriller that has drawn comparisons to masters of the genre like Dennis Lehane and Michael Connelly, Brian Freeman weaves obsession, sex, and revenge into a story that grips the reader with vivid characters and shocking plot twists from the first page to the last.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2008' data-title="Anathem" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\anathem.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Anathem</h3>
+                  <p class="author">Neal Stephenson &bull; 2008</p>
+                  <p>Thousands of years before the events in the novel, the planet's intellectuals entered concents (monastic communities) to protect their activities from the collapse of society.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2005' data-title="Snow Crash" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\snow.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Snow Crash</h3>
+                  <p class="author">Neal Stephenson &bull; 1992</p>
+                  <p>Hiro Protagonist is a hacker and pizza delivery driver for the Mafia. He meets Y.T. (short for Yours Truly), a young skateboard Kourier (courier) who refers to herself in the third person, during a failed attempt to make a delivery on time. Y.T. completes the delivery on his behalf and they strike up a partnership, gathering intel and selling it to the CIC, the for-profit organization that evolved from the CIA's merger with the Library of Congress.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Thriller/Mystery"]' data-date-created='2015' data-title="The Girl in the Spider's Web" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\THE_GIRL_OF_THE_SPIDER_WEB_652x.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">The Girl in the Spider's Web</h3>
+                  <p class="author">David Lagercrantz &bull; 2015</p>
+                  <p>Computer scientist Frans Balder abandons a prestigious job in Silicon Valley and returns to Sweden to take custody of his autistic son August.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Thriller/Mystery"]' data-date-created='2008' data-title="The Hunger Games" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\The_Hunger_Games.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">The Hunger Games</h3>
+                  <p class="author">Suzanne Collins &bull; 2008</p>
+                  <p>In the nation of Panem, established in the remains of North America after an unspecified apocalyptic event, the wealthy Capitol exploits the twelve surrounding districts for their natural resources and labour.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Thriller/Mystery","Romance"]' data-date-created='2007' data-title="Eclipse" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\51CG2tsMDJL.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Eclipse</h3>
+                  <p class="author">Stephenie Meyer &bull; 2007</p>
+                  <p>The story begins with Seattle, Washington being plagued by a string of unsolved murders, which Edward Cullen suspects is caused by a new-born vampire with an uncontrollable thirst for human blood.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Romance"]' data-date-created='1815' data-title="Emma" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\emma-jane-austen.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Emma</h3>
+                  <p class="author">Jane Austen &bull; 1815</p>
+                  <p>Emma Woodhouse's friend and former governess, Miss Taylor, has just married Mr. Weston. Having introduced them, Emma takes credit for their marriage and decides that she likes matchmaking.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Thriller/Mystery"]' data-date-created='2014' data-title="Raiders of the Nile" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\raiders.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Raiders of the Nile</h3>
+                  <p class="author">Steven Saylor &bull; 2014</p>
+                  <p>It is the year 88 BC. The young Gordianus is living in Alexandria with his beloved slave Bethesda. When Bethesda disappears, he learns that she has been kidnapped by bandits, and must set out on a dangerous journey into the Nile Delta, accompanied only by the young slave boy Djet.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Romance"]' data-date-created='2011' data-title="Shatter Me" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\81tWhFdQroL.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Shatter Me</h3>
+                  <p class="author">Tahereh Mafi &bull; 2011</p>
+                  <p>Shatter Me follows the narrative of Juliette Ferrars, a 17-year-old girl with a paralyzing and killing touch. She can take living organisms' energy.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Romance"]' data-date-created='2016' data-title="It Ends with Us" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\ends.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">It Ends with Us</h3>
+                  <p class="author">Colleen Hoover &bull; 2016</p>
+                  <p>Lily hasn't always had it easy, but that's never stopped her from working hard for the life she wants.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2011' data-title="Only Time Will Tell" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\220px-OnlyTimeWillTell.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Only Time Will Tell</h3>
+                  <p class="author">Jeffrey Archer &bull; 2011</p>
+                  <p>The plot revolves around the protagonist Harry Clifton, spanning the time between the end of World War I and the beginning of the Second World War.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Thriller/Mystery"]' data-date-created='2011' data-title="Genuine Fraud" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\genuine.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Genuine Fraud</h3>
+                  <p class="author">E. Lockhart &bull; 2017</p>
+                  <p>Imogen is done pretending to be perfect, and Jule refuses to go back to the person she once was. Somewhere between the mansions of Martha's Vineyard and the shores of Cabo San Lucas, their intense friendship takes a dark turn.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2017' data-title="Dear Evan Hansen" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\evan.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Dear Evan Hansen</h3>
+                  <p class="author"> Val Emmich &bull; 2017</p>
+                  <p>When a letter that was never meant to be seen by anyone draws high school senior Evan Hansen into a family's grief over the loss of their son, he is given the chance of a lifetime: to belong.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='1991' data-title="As the Crow Flies" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\crow.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">As the Crow Flies</h3>
+                  <p class="author">Jeffrey Archer &bull; 1991</p>
+                  <p>Growing up in the slums of East End London, Charlie Trumper dreams of someday running his grandfather's fruit and vegetable barrow. That day comes suddenly when his grandfather dies leaving him the floundering business.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction", "Romance"]' data-date-created='2017' data-title="Without Merit" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\without-merit.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Without Merit</h3>
+                  <p class="author">Colleen Hoover &bull; 2017</p>
+                  <p>The Voss family is anything but normal. They live in a repurposed church, newly baptized Dollar Voss. The once cancer-stricken mother lives in the basement, the father is married to the mother’s former nurse, the little half-brother isn’t allowed to do or eat anything fun, and the eldest siblings are irritatingly perfect. Then, there’s Merit.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='[]' data-date-created='2016' data-title="When Breath Becomes Air" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\220px-When_Breath_Becomes_Air.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">When Breath Becomes Air</h3>
+                  <p class="author">Paul Kalanithi &bull; 2016</p>
+                  <p>At the age of thirty-six, on the verge of completing a decade's worth of training as a neurosurgeon, Paul Kalanithi was diagnosed with stage IV lung cancer.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction", "Thriller/Mystery"]' data-date-created='2014' data-title="Messenger of Fear" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\23282679.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Messenger of Fear</h3>
+                  <p class="author">Michael Grant &bull; 2014</p>
+                  <p>I remembered my name – Mara. But, standing in that ghostly place, faced with the solemn young man in the black coat with silver skulls for buttons, I could recall nothing else about myself.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2007' data-title="Burning Bright" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\burning.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Burning Bright</h3>
+                  <p class="author">Tracy Chevalier &bull; 2007</p>
+                  <p>Burning Bright follows the Kellaway family as they leave behind tragedy in rural Dorset and come to late 18th-century London. As they move in next door to the radical painter/poet William Blake, and take up work for a near-by circus impresario, the youngest family member gets to know a girl his age.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction", "Fantasy"]' data-date-created='2012 ' data-title="Falling Kingdoms" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\kingdom.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Falling Kingdoms</h3>
+                  <p class="author">Morgan Rhodes &bull; 2012 </p>
+                  <p>In the three kingdoms of Mytica, magic has long been forgotten. And while hard-won peace has reigned for centuries, a deadly unrest now simmers below the surface.
+
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2010' data-title="Will Grayson, Will Grayson" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\will.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Will Grayson, Will Grayson</h3>
+                  <p class="author">John Green &bull; 2010</p>
+                  <p>Will Grayson meets Will Grayson. One cold night, in a most unlikely corner of Chicago, two strangers are about to cross paths. From that moment on, their world will collide and lives intertwine.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2015' data-title="I Was Here" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\18879761.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">I Was Here</h3>
+                  <p class="author">Gayle Forman &bull; 2015</p>
+                  <p>When her best friend Meg drinks a bottle of industrial-strength cleaner alone in a motel room, Cody is understandably shocked and devastated. She and Meg shared everything—so how was there no warning?
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+            </ul>
+          </div>
+  
+        </section>
+  
+      </div>
+  
+      
+  
+    </div>
+    <!-- /main -->
+  
+    <div class="main-overlay">
+      <div class="overlay-full"></div>
+    </div>
+  
+  </div>
+  <!-- /main-container -->
+
+  <script src="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.js"></script>
+</body>
+</html>

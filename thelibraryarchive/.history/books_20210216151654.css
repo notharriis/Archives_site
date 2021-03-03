@@ -1,0 +1,173 @@
+/*
+ *  Imports
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url('https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css');
+
+/*
+ *  Variables
+*/
+
+$global-width: 1024px;
+// Colors
+$library-palette: ( primary: #219e9a,
+);
+primary: #219e9a;
+light-gray: #ecf0f1;
+medium-gray: #d2d6d5;
+dark-gray: #313131;
+black: #000;
+white: #fff;
+// Typography
+body-font-family: 'Lato',
+'Helvetica Neue',
+Helvetica,
+Arial,
+sans-serif;
+
+/* Single Line truncation */
+
+@mixin truncate() {
+  // width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Multiline truncation */
+
+@mixin multi-truncate($font-size: 15px,
+$line-height: 1.4,
+$lines-to-show: 3) {
+  display: block;
+  display: -webkit-box;
+  height: $font-size * $line-height * $lines-to-show;
+  /* Fallback for non-webkit */
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/*
+ *  Global styles
+*/
+
+html,
+body,
+.main,
+.main-container {
+  height: 100%;
+}
+
+body {
+  font-family: body-font-family;
+  color: dark-gray;
+  background: light-gray;
+}
+
+.row {
+  max-width: global-width;
+}
+
+
+/*
+ *  Typography
+*/
+
+body,
+p,
+a,
+li {
+  font-family: body-font-family;
+  font-size: 15px;
+}
+
+a {
+  color: primary;
+}
+
+h2,
+h3 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  color: dark-gray;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  line-height: 40px;
+  color: rgba(dark-gray, 0.7);
+}
+
+p:not(.author) {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+p.author {
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+  font-weight: 400;
+  color: rgba(dark-gray, 0.5);
+}
+
+
+/*
+ *  Button
+*/
+
+a.button {
+  margin-bottom: 0;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 3px;
+  background-color: rgba(dark-gray, 0.5);
+}
+
+
+
+/*
+ *  Header
+*/
+
+.page-header {
+  position: relative;
+  margin-bottom: 55px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  background-color: white;
+}
+
+.main-logo {
+  display: inline-block;
+  padding: 1em;
+  width: auto;
+  
+}
+
+.menu-search {
+  float: right;
+  width: calc(100% - 200px);
+}
+

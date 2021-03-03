@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.js" integrity="sha512-rW0AnJ6ZfiGg+vLsmh3gEdtdBAI0EHPbiBOIgR76bd94L2aOkNzZ8+v5Bl3cxuDZB3UYkJArhtNhjYbs4ASbGA==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.css" integrity="sha512-CBt9ZLK1JPTeo8L3oU8vfes2s/IE4F0QkFWf/zAB231WvVOEntSWOouCBH0g2rlFqbr4enss+I43SLGMGqsDWA==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" integrity="sha512-egJ/Y+22P9NQ9aIyVCh0VCOsfydyn8eNmqBy+y2CnJG+fpRIxXMS6jbWP8tVKp0jp+NO5n8WtMUAnNnGoJKi4w==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/4.0.0/shuffle.min.js" integrity="sha512-z0falAsjrpKeZ5ubPQgG4e82bGxhegCf1eMFAGPUNfhcNjbmra8lnCvTkCT4cdB8gXveptaa09fTs3x1LjHn6w==" crossorigin="anonymous"></script>
+    
+    <script src="Tla.js"></script>
+    <title>thelibraryarchives</title>
+</head>
+<body>
+  <div id="main-container" class="main-container nav-effect-1" style="background-color: rgb(65, 64, 64);">
+
+    <nav class="nav-menu nav-effect-1" id="menu-1">
+      <h2 class="">The Library</h2>
+      <ul>
+        <li><a class="" href="#">Checkout</a></li>
+        <li><a class="" href="#">Return</a></li>
+        <li><a class="" href="#">About</a></li>
+        <li><a class="" href="#">Contact</a></li>
+      </ul>
+    </nav>
+  
+    <div class="main clearfix">
+  
+      <!-- Header Content -->
+      <header id="header" class="page-header">
+        <div class="page-header-container row">
+  
+          <!-- Logo -->
+          <div class="main-logo">
+            <a href="#" class="logo">The Library</a>
+          </div>
+  
+          <div class="menu-search">
+            <!-- Main Navigation -->
+            <div class="main-navigation">
+              <a href="#">Menu</a>
+            </div>
+  
+            <!-- Search -->
+            <div class="catalog-search">
+              <input class="shuffle-search input_field " type="search" autocomplete="off" value="" maxlength="128" id="input-search" />
+              <label class="input_label" for="input-search">
+                <span class="input_label-content">Search Library</span>
+                <span class="input_label-search"></span>
+              </label>
+            </div>
+  
+          </div>
+        </div>
+      </header>
+  
+  
+      <!-- Main Section -->
+      <div class="page-container">
+  
+        <div class="page-title category-title">
+          <!-- <h1>Book Viewer</h1> -->
+        </div>
+  
+        <section id="book_list">
+  
+          <div class="toolbar row">
+            <div class="filter-options small-12 medium-9 columns">
+              <a href="#" class="filter-item active" data-group="all">All Categories</a>
+              <a href="#" class="filter-item" data-group="Romance">Romance</a>
+              <a href="#" class="filter-item" data-group="Fiction">Fiction</a>
+              <a href="#" class="filter-item" data-group="Fantasy">Fantasy</a>
+              <a href="#" class="filter-item" data-group="classic">Classics</a>
+              <a href="#" class="filter-item" data-group="Thriller/Mystery">Thriller/Mystery</a>
+              <a href="#" class="filter-item" data-group="Poetry">Poetry</a>
+            </div>
+  
+            <div class="small-12 medium-3 columns">
+              <select class="sort-options">
+              <option value="" disabled selected>Sort by</option>
+              <option value="" >Featured</option>
+              <option value="title">Alphabetical</option>
+              <option value="date-created">Published</option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="grid-shuffle">
+            <ul id="grid" class="row">
+
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fantasy","Fiction"]' data-date-created='2016' data-title='Heartless' data-color='#725d64'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\heartless.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Heartless</h3>
+                  <p class="author">Marissa Meyer &bull; 2016</p>
+                  <p>Long before she was the terror of Wonderland—the infamous Queen of Hearts—she was just a girl who wanted to fall in love.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fantasy","Fiction"]' data-date-created='2011' data-title="Silence" data-color='#658539'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\cvr9781442426658_9781442426658_hr.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Silence</h3>
+                  <p class="author">Becca Fitzpatrick &bull; 2011</p>
+                  <p>Nora Grey can't remember the past five months of her life. After the initial shock of waking up in a cemetery and being told that she has been missing for weeks - with no one knowing where she was or who she was with - she tried to get her life back on track. Go to school, hang out with her best friend, Vee, and dodge mom's creepy new boyfriend.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+
+
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2013' data-title='The Madmans Daughter' data-color='#705e1e'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\index.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">The Madman's Daughter</h3>
+                  <p class="author">Megan Shepherd &bull; 2013</p>
+                  <p>Following accusations that her scientist father gruesomely experimented on animals, sixteen-year-old Juliet watched as her family and her genteel life in London crumbled around her.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Thriller/Mystery"]' data-date-created=' 2003' data-title='The Da Vinci Code' data-color='#939894'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\image.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">The Da Vinci Code</h3>
+                  <p class="author">Dan Brown &bull; 2003</p>
+                  <p>Louvre curator and Priory of Sion grand master Jacques Saunière is fatally shot one night at the museum by an albino Catholic monk named Silas, who is working on behalf of someone he knows only as the Teacher, who wishes to discover the location of the "keystone," an item crucial in the search for the Holy Grail.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+  
+              </li>
+
+              <li class="book-item small-12 medium-6 columns" data-groups='["Romance"]' data-date-created='1962' data-title='Point of Retreat' data-color='#fe7b21'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\19390926.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Point of Retreat</h3>
+                  <p class="author">Colleen Hoover &bull; 2012</p>
+                  <p>Sometimes two people have to fall apart to realize just how much they belong together.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Romance"]' data-date-created='1835' data-title='myheartandotherblackholes' data-color='#aea98c'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\my heart and other black holes.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">My Heart and Other Black Holes</h3>
+                  <p class="author">Jasmine Warga &bull; 2015</p>
+                  <p>Sixteen-year-old physics nerd Aysel is obsessed with plotting her own death. With a mother who can barely look at her without wincing, classmates who whisper behind her back, and a father whose violent crime rocked her small town, Aysel is ready to turn her potential energy into nothingness.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+
+
+
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='1866' data-title="Crime and Punishment" data-color='#2c63a0'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\cap3.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Crime and Punishment</h3>
+                  <p class="author">Fyodor Dostoevsky &bull; 1866</p>
+                  <p>Rodion Romanovich Raskolnikov, a former law student, lives in extreme poverty in a tiny, rented room in Saint Petersburg. Isolated and antisocial, he has abandoned all attempts to support himself, and is brooding obsessively on a scheme he has devised to murder and rob an elderly pawn-broker. On the pretext of pawning a watch, he visits her apartment, but remains unable to commit himself.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+
+
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fantasy","Fiction"]' data-date-created='2018' data-title='Vox' data-color='#800020'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\vox.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Vox</h3>
+                  <p class="author">Christina Dalcher &bull; 2018</p>
+                  <p>Set in an America where half the population has been silenced, VOX is the harrowing, unforgettable story of what one woman will do to protect herself and her daughter.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+
+
+
+              
+
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Romance"]' data-date-created='1937' data-title='Slammed' data-color='#fcc278'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\Slammed.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Slammed</h3>
+                  <p class="author">Colleen Hoover &bull; 2012</p>
+                  <p>Emotion-packed debut novel unforgettably captures all the magic and confusion of first love, as two young people forge an unlikely bond before discovering that fate has other plans for them.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+  
+                
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='1951' data-title='Holding_smoke' data-color='#009c8b'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\22639535.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Holding Smoke</h3>
+                  <p class="author"> Elle Cosimano &bull; 2016</p>
+                  <p>An inventive paranormal gambit, a compelling lead character, and a plot that twists and turns through to the last page.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+                  
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Romance"]' data-date-created='2012' data-title='2012' data-color='#9c9688'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\Losing hope.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Losing Hope</h3>
+                  <p class="author">Colleen Hoover &bull; 2012</p>
+                  <p>Haunted by the little girl he couldn’t save from imminent danger, Holder’s life has been overshadowed by feelings of guilt and remorse.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+  
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Romance"]' data-date-created='1954' data-title='maybe someday' data-color='#db2e0f'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\maybesomeday.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Maybe Someday</h3>
+                  <p class="author">Colleen Hoover &bull; 2014</p>
+                  <p>At twenty-two years old, Sydney is enjoying a great life: She’s in college, working a steady job, in love with her wonderful boyfriend, Hunter, and rooming with her best friend, Tori. But everything changes when she discovers that Hunter is cheating on her—and she’s forced to decide what her next move should be.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+  
+            
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='1925' data-title='love letters to the dead' data-color='#e3b005'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\lovelettersdead.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Love Letters To The Dead</h3>
+                  <p class="author">Ava Dellaira &bull; 2014</p>
+                  <p>Laurel has just started class at a new high school. She is a quiet student who still dresses like she's in middle school. Mrs. Buster, her English teacher, gives the class an assignment to write a letter to a dead person. Laurel chooses Kurt Cobain and begins an ongoing relationship with the other dead people. "Confiding in dead geniuses helps a teen process her grief and rage."</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='1851' data-title='All the Bright Places' data-color='#a9afad'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\18460392.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">All the Bright Places</h3>
+                  <p class="author">Jennifer Niven &bull; 2015</p>
+                  <p>Theodore Finch and Violet Markey are two teenagers who badly want to escape from their small Indiana town.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+            
+  
+              
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2019' data-title='Rules For Vanishing' data-color='#b4aa91'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\rules.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Rules For Vanishing</h3>
+                  <p class="author">Kate Alice Marshall &bull; 2019</p>
+                  <p>Once a year, a road appears in the forest. And at the end of it, the ghost of Lucy Gallows beckons. Lucy's game isn't for the faint of heart. If you win, you escape with your life. But if you lose....</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Thriller/Mystery"]' data-date-created='2014' data-title="Panic" data-color='#7a4930'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\panic.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Panic</h3>
+                  <p class="author">Lauren Oliver &bull; 2014</p>
+                  <p>Panic began as so many things do in Carp, a poor town of twelve thousand people in the middle of nowhere: because it was summer, and there was nothing else to do. Heather never thought she would compete in panic.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction"]' data-date-created='2016' data-title="Girl in Pieces" data-color='#603060'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\81avn+rvTlL.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Girl in Pieces</h3>
+                  <p class="author">Kathleen Glasgow &bull; 2016</p>
+                  <p>Charlie Davis is in pieces. At seventeen, she’s already lost more than most people lose in a lifetime.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fantasy","Fiction"]' data-date-created='2017' data-title="Because You Love to Hate Me" data-color='#9a9c43'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\love.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Because You Love to Hate Me</h3>
+                  <p class="author">Amerie &bull; 2017</p>
+                  <p>Leave it to the heroes to save the world--villains just want to rule the world.</p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+          
+  
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Thriller/Mystery"]' data-date-created='2005' data-title="Immoral" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\immoral.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Immoral</h3>
+                  <p class="author">Brian Freeman &bull; 2005</p>
+                  <p>In a riveting debut thriller that has drawn comparisons to masters of the genre like Dennis Lehane and Michael Connelly, Brian Freeman weaves obsession, sex, and revenge into a story that grips the reader with vivid characters and shocking plot twists from the first page to the last.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Thriller/Mystery"]' data-date-created='2005' data-title="Immoral" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\immoral.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Immoral</h3>
+                  <p class="author">Brian Freeman &bull; 2005</p>
+                  <p>In a riveting debut thriller that has drawn comparisons to masters of the genre like Dennis Lehane and Michael Connelly, Brian Freeman weaves obsession, sex, and revenge into a story that grips the reader with vivid characters and shocking plot twists from the first page to the last.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Thriller/Mystery"]' data-date-created='2005' data-title="Immoral" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\immoral.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Immoral</h3>
+                  <p class="author">Brian Freeman &bull; 2005</p>
+                  <p>In a riveting debut thriller that has drawn comparisons to masters of the genre like Dennis Lehane and Michael Connelly, Brian Freeman weaves obsession, sex, and revenge into a story that grips the reader with vivid characters and shocking plot twists from the first page to the last.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Thriller/Mystery"]' data-date-created='2005' data-title="Immoral" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\immoral.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Immoral</h3>
+                  <p class="author">Brian Freeman &bull; 2005</p>
+                  <p>In a riveting debut thriller that has drawn comparisons to masters of the genre like Dennis Lehane and Michael Connelly, Brian Freeman weaves obsession, sex, and revenge into a story that grips the reader with vivid characters and shocking plot twists from the first page to the last.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Thriller/Mystery"]' data-date-created='2005' data-title="Immoral" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\immoral.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Immoral</h3>
+                  <p class="author">Brian Freeman &bull; 2005</p>
+                  <p>In a riveting debut thriller that has drawn comparisons to masters of the genre like Dennis Lehane and Michael Connelly, Brian Freeman weaves obsession, sex, and revenge into a story that grips the reader with vivid characters and shocking plot twists from the first page to the last.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+              <li class="book-item small-12 medium-6 columns" data-groups='["Fiction","Thriller/Mystery"]' data-date-created='2005' data-title="Immoral" data-color='#b06010'>
+                <div class="bk-img">
+                  <div class="bk-wrapper">
+                    <div class="bk-book bk-bookdefault">
+                      <div class="bk-front">
+                        <div class="bk-cover"><img src="img\immoral.jpg" alt="" class="img"></div>
+                      </div>
+                      <div class="bk-back"></div>
+                      <div class="bk-left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-details">
+                  <h3 class="book-item_title">Immoral</h3>
+                  <p class="author">Brian Freeman &bull; 2005</p>
+                  <p>In a riveting debut thriller that has drawn comparisons to masters of the genre like Dennis Lehane and Michael Connelly, Brian Freeman weaves obsession, sex, and revenge into a story that grips the reader with vivid characters and shocking plot twists from the first page to the last.
+                  </p>
+                  <a href="#" class="button ">Details</a>
+                </div>
+              </li>
+  
+            </ul>
+          </div>
+  
+        </section>
+  
+      </div>
+  
+      <!-- Footer Content -->
+      <footer id="footer" class="page-footer">
+        <div class="row footer-wrapper">
+          <div class="original-version small-12 columns"><a href="http://interactivejoe.com/book-viewer/" target="_blank"><em>Original Version can be found here.</em></a></div>
+          <div class="copyright small-12 columns">&copy; 2016 - <a href="http://interactivejoe.com/"  target="_blank">InteractiveJoe</a></div>
+        </div>
+      </footer>
+  
+    </div>
+    <!-- /main -->
+  
+    <div class="main-overlay">
+      <div class="overlay-full"></div>
+    </div>
+  
+  </div>
+  <!-- /main-container -->
+
+  <script src="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.js"></script>
+</body>
+</html>
